@@ -7,16 +7,16 @@
            payerDrn : {
              payerId: 1,
              drnId: 111,
-             drn:"12345",
-             startDate: "3/3/2014",
+             drn:"40042412344",
+             startDate: "07/04/2015",
              endDate: "12/12/2017",
-             nickName: "Rent",
+             nickName: "My Strata bill",
              status: "PayerDrnStatus"
            },
            biller : {
              id: 0,
              type: "BillerType",
-             name: "LJ Hooker",
+             name: "HS Bentleigh",
              status: "",
              accessible: false
            }
@@ -25,16 +25,16 @@
            payerDrn : {
              payerId: 1,
              drnId: 112,
-             drn:"54321",
-             startDate: "1/1/2014",
+             drn:"40042412344",
+             startDate: "07/04/2015",
              endDate: "1/1/2016",
-             nickName: "Council Rates",
+             nickName: "My Water Bill",
              status: "PayerDrnStatus"
            },
            biller : {
              id: 0,
              type: "BillerType",
-             name: "Sydney City Council",
+             name: "HS Bentleigh - PM RENT Martin Place A/C",
              status: "",
              accessible: false
            }
@@ -42,17 +42,53 @@
          {
            payerDrn : {
              payerId: 1,
-             drnId: 113,
-             drn:"678910",
-             startDate: "1/1/2015",
-             endDate: "1/1/2017",
-             nickName: "Strata",
+             drnId: 112,
+             drn:"40042412344",
+             startDate: "07/04/2015",
+             endDate: "1/1/2016",
+             nickName: "Electricity",
              status: "PayerDrnStatus"
            },
            biller : {
              id: 0,
              type: "BillerType",
-             name: "Strata Master",
+             name: "HS Bentleigh - PM RENT Martin Place A/C",
+             status: "",
+             accessible: false
+           }
+         },
+         {
+           payerDrn : {
+             payerId: 1,
+             drnId: 112,
+             drn:"40042412344",
+             startDate: "07/04/2015",
+             endDate: "1/1/2016",
+             nickName: "Gas",
+             status: "PayerDrnStatus"
+           },
+           biller : {
+             id: 0,
+             type: "BillerType",
+             name: "HS Bentleigh - PM RENT Martin Place A/C",
+             status: "",
+             accessible: false
+           }
+         },
+         {
+           payerDrn : {
+             payerId: 1,
+             drnId: 112,
+             drn:"40042412344",
+             startDate: "07/04/2015",
+             endDate: "1/1/2016",
+             nickName: "Phone Bill",
+             status: "PayerDrnStatus"
+           },
+           biller : {
+             id: 0,
+             type: "BillerType",
+             name: "HS Bentleigh - PM RENT Martin Place A/C",
              status: "",
              accessible: false
            }

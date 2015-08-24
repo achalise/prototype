@@ -3,7 +3,7 @@
 <head>
   <title>DEFT payment gateway</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="styles/css/myStyle.css" rel="stylesheet">
+  <!-- link href="styles/css/myStyle.css" rel="stylesheet" -->
   <link href="styles/css/bootstrap.css" rel="stylesheet">
 
 
@@ -16,7 +16,7 @@
 
 </head>
 
-<body>
+<body ng-app="payerPortalApp">
 
 
 <nav class="navbar navbar-fixed-top navbar-inverse">
@@ -31,13 +31,13 @@
     <div class="collapse navbar-collapse no-transition" id="navbar">
       <ul class="nav navbar-nav">
         <li class="active">
-          <a href="index.html#">Home</a>
+          <a href="#/">Home</a>
         </li>
         <li>
-          <a href="index.html#about">About</a>
+          <a href="/#about">About</a>
         </li>
         <li>
-          <a href="index.html#contact">Contact</a>
+          <a href="/#contact">Contact</a>
         </li>
       </ul>
     </div>
@@ -55,90 +55,14 @@
 
 
 <header class="container-fluid">
-  <!-- <div class="row">
-      <div class="col-xs-8">
-          <img class="logo" src="images/logo.png">
-      </div>
-      <div class="col-xs-4">
-          <button class="xxx clearfix">
-              <img class="hamburger pull-right" src="images/hamburger.png" width="30px">
-              <div class="menu">Menu</div>
-          </button>
-      </div>
-  </div> -->
+
 </header>
 <main class="container">
-  <section class="row">
-    <div class="col-xs-12 border-btm">
-      <h1>My DEFT ref. NO</h1>
-    </div>
-    <div class="col-xs-12 border-btm">
-      <a class="clearfix addWrap" data-toggle="modal" data-target=".modalAdd" data-backdrop="static">
-        <h3 class="blueAdd vcenter">Add DEFT number</h3>
-        <div class="plus vcenter">+</div>
-      </a>
-    </div>
-    <div class="col-xs-12">
-      <ul class="list">
-        <li>
-          <a class="clearfix info-Wrap" data-toggle="modal" data-target=".modalEdit">
-            <div class="vcenter info-block">
-              <h3>My Strata bill</h3>
-              <p>HS BENTLEIGH</p>
-              <p>4004 241 2344</p>
-              <p>Start date 07/04/2015</p>
-            </div>
-            <div class="editSym vcenter">Edit</div>
-          </a>
-        </li>
-        <li>
-          <a class="clearfix info-Wrap" data-toggle="modal" data-target=".modalEdit">
-            <div class="vcenter info-block">
-              <h3>My Water bill</h3>
-              <p>HS BENTLEIGH - PM RENT Martin place A/C</p>
-              <p>4004 241 2344</p>
-              <p>Start date 07/04/2015</p>
-            </div>
-            <div class="editSym vcenter">Edit</div>
-          </a>
-        </li>
-        <li>
-          <a class="clearfix info-Wrap" data-toggle="modal" data-target=".modalEdit">
-            <div class="vcenter info-block">
-              <h3>Electricity</h3>
-              <p>HS BENTLEIGH - PM RENT Martin place A/C</p>
-              <p>4004 241 2344</p>
-              <p>Start date 07/04/2015</p>
-            </div>
-            <div class="editSym vcenter">Edit</div>
-          </a>
-        </li>
-        <li>
-          <a class="clearfix info-Wrap" data-toggle="modal" data-target=".modalEdit">
-            <div class="vcenter info-block">
-              <h3>Gas</h3>
-              <p>HS BENTLEIGH - PM RENT Martin place A/C</p>
-              <p>4004 241 2344</p>
-              <p>Start date 07/04/2015</p>
-            </div>
-            <div class="editSym vcenter">Edit</div>
-          </a>
-        </li>
-        <li>
-          <a class="clearfix info-Wrap" data-toggle="modal" data-target=".modalEdit">
-            <div class="vcenter info-block">
-              <h3>Phone Bill</h3>
-              <p>HS BENTLEIGH - PM RENT Martin place A/C</p>
-              <p>4004 241 2344</p>
-              <p>Start date 07/04/2015</p>
-            </div>
-            <div class="editSym vcenter">Edit</div>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </section>
+  <div ng-view=""></div>
+  </div>
 </main>
+
+
 <footer>
 </footer>
 <!-- Modal -->
@@ -182,15 +106,47 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="styles/js/bootstrap.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="js/ie10-viewport-bug-workaround.js"></script>
-<script src="js/offcanvas.js"></script>
+<script src="styles/js/ie10-viewport-bug-workaround.js"></script>
+<!--script src="styles/js/offcanvas.js"></script -->
 <script>
         $('#myModal').on('shown.bs.modal', function () {
           $('#myInput').focus()
         })    
 
     </script>
+
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-mocks/angular-mocks.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-touch/angular-touch.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="modules/common/app.js"></script>
+<script src="modules/common/app-mockbackend.js"></script>
+<script src="modules/common/home/controllers/main.js"></script>
+<script src="modules/common/home/services/commonDataService.js"></script>
+<script src="modules/common/home/services/ServerDataModel.js"></script>
+<script src="modules/common/home/directive/inLineEditDirective.js"></script>
+
+<script src="modules/noncommon/drnList/controllers/drnListController.js"></script>
+<script src="modules/noncommon/drnDetail/controllers/drnDetailController.js"></script>
+<script src="modules/noncommon/drnDetail/services/payerDrnResource.js"></script>
+<script src="scripts/controllers/about.js"></script>
+<!-- endbuild -->
+
+
+
 </body>
 </html>

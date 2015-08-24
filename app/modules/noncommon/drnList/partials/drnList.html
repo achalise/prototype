@@ -1,13 +1,26 @@
-<ul class="list-group">
-    <li class="list-group-item" ng-repeat="drn in drns">
-        <span class="badge" ng-click="goToDRNDetails(drn.id)"> Edit </a></span>
-        {{drn}}
-    </li>
-</ul>
-
-<ul class="list-group">
-    <li class="list-group-item" ng-repeat="drn in payerDrnAssociations">
-        <span class="badge" ng-click="goToDRNDetails(drn.payerDrn.drnId)"> Edit </a></span>
-        {{drn.payerDrn.nickName}}|{{drn.biller.name}}
-    </li>
-</ul>
+<section class="row">
+    <div class="col-xs-12 border-btm">
+        <h1>My DEFT ref. NO</h1>
+    </div>
+    <div class="col-xs-12 border-btm">
+        <a class="clearfix addWrap" data-toggle="modal" data-target=".modalAdd" data-backdrop="static">
+            <h3 class="blueAdd vcenter">Add DEFT number</h3>
+            <div class="plus vcenter">+</div>
+        </a>
+    </div>
+    <div class="col-xs-12">
+        <ul class="list">
+            <li ng-repeat="drn in payerDrnAssociations">
+                <a class="clearfix info-Wrap" data-toggle="modal" data-target=".modalEdit">
+                    <div class="vcenter info-block">
+                        <h3>{{drn.payerDrn.nickName}}</h3>
+                        <p>{{drn.biller.name | uppercase}}</p>
+                        <p>{{drn.payerDrn.drn}}</p>
+                        <p>Start date {{drn.payerDrn.startDate}}</p>
+                    </div>
+                    <div class="editSym vcenter">Edit</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>

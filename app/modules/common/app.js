@@ -21,11 +21,6 @@
     ])
     .config(function ($routeProvider) {
       $routeProvider
-        .when('/', {
-          templateUrl: 'modules/common/home/partials/main.html',
-          controller: 'MainCtrl',
-          controllerAs: 'main'
-        })
         .when('/drnList', {
           templateUrl: 'modules/noncommon/drnList/partials/drnList.html',
           controller: 'drnListController'
