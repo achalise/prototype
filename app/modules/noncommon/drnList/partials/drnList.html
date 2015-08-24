@@ -1,0 +1,13 @@
+<ul class="list-group">
+    <li class="list-group-item" ng-repeat="drn in drns">
+        <span class="badge" ng-click="goToDRNDetails(drn.id)"> Edit </a></span>
+        {{drn}}
+    </li>
+</ul>
+
+<ul class="list-group">
+    <li class="list-group-item" ng-repeat="drn in payerDrnAssociations">
+        <span class="badge" ng-click="goToDRNDetails(drn.payerDrn.drnId)"> Edit </a></span>
+        {{drn.payerDrn.nickName}}|{{drn.biller.name}}
+    </li>
+</ul>

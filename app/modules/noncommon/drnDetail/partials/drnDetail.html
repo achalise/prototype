@@ -1,0 +1,12 @@
+
+<div class="list-group">
+    <a href="#" class="list-group-item active">
+        DRN Details(DRN: {{drnAssociation.payerDrn.drnId}})
+    </a>
+    <div class="list-group-item" inline-edit="drnAssociation.payerDrn.nickName"
+       on-save="updateAlias(drnAssociation.payerDrn.drnId, drnAssociation.payerDrn.nickName)"
+       on-cancel="cancelEdit()">{{drnAssociation.payerDrn.nickName}}</div>
+    <a href="#" class="list-group-item">{{drnAssociation.payerDrn.startDate}}</a>
+    <a href="#" class="list-group-item">{{drnAssociation.payerDrn.endDate}}</a>
+    <a href="#" class="list-group-item">{{drnAssociation.biller.name}}</a>
+</div>
