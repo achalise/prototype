@@ -21,7 +21,7 @@
     ])
     .config(function ($routeProvider) {
       $routeProvider
-        .when('/drnList', {
+        .when('/payer/:id/drn', {
           templateUrl: 'modules/noncommon/drnList/partials/drnList.html',
           controller: 'drnListController'
         })

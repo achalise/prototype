@@ -2,11 +2,11 @@
   'use strict';
 
   angular.module('payerPortalApp')
-     .controller('drnListController', ['$scope', '$log', '$location', 'ServerDataModel', 'PayerDrnResource',
-                               function($scope, $log, $location, ServerDataModel, PayerDrnResource) {
+     .controller('drnListController', ['$scope', '$log', '$location', '$routeParams', 'ServerDataModel', 'PayerDrnResource',
+                               function($scope, $log, $location, $routeParams, ServerDataModel, PayerDrnResource) {
 
-
-      PayerDrnResource.query({ payerId: 1 } ,function(data){
+      $scope.payerId = $routeParams.id;
+      PayerDrnResource.query({ payerId: $scope.payerId } ,function(data){
          $scope.payerDrnAssociations = ServerDataModel.payerDrnAssociations;
       });
 
