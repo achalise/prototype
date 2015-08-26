@@ -3,16 +3,14 @@
 <head>
   <title>DEFT payment gateway</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- link href="styles/css/myStyle.css" rel="stylesheet" -->
   <link href="styles/css/bootstrap.css" rel="stylesheet">
+  <link href="styles/css/font-awesome.css" rel="stylesheet">
 
-  <!-- link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" /-->
-
-  <!--[if lt IE 9]>
+<!--[if lt IE 9]>
   <script src="js/html5shiv.js"></script>
   <script src="js/respond.min.js"></script>
   <link rel="stylesheet" href="styles/css/ie8.css">
-  <![endif]-->
+<![endif]-->
 
 </head>
 
@@ -65,63 +63,16 @@
 
 <footer>
 </footer>
-<!-- Modal -->
-<div class="modal fade modalAdd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn btn-cancel btn-sm" data-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-primary btn-sm pull-right">Add</button>
-      </div>
-      <div class="modal-body">
-        <h4 class="modal-title">Add DEFT number</h4>
-        <div class="form-group">
-          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="e.g. 4004 241 2344">
-        </div>
-        <div class="form-group">
-          <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Alias  e.g. My Strata">
-        </div>
-
-      </div>
-    </div>
-  </div>
-</div>
-<div class="modal fade modalEdit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title" id="myModalLabel">Edit</h4>
-      </div>
-      <div class="modal-body">...
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="styles/js/bootstrap.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="styles/js/ie10-viewport-bug-workaround.js"></script>
-<!--script src="styles/js/offcanvas.js"></script -->
-<script>
-        $('#myModal').on('shown.bs.modal', function () {
-          $('#myInput').focus()
-        })    
-
-    </script>
 
 <!-- build:js(.) scripts/vendor.js -->
 <!-- bower:js -->
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/angular-mocks/angular-mocks.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <script src="bower_components/angular-animate/angular-animate.js"></script>
 <script src="bower_components/angular-cookies/angular-cookies.js"></script>
@@ -129,6 +80,8 @@
 <script src="bower_components/angular-route/angular-route.js"></script>
 <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
 <script src="bower_components/angular-touch/angular-touch.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="bower_components/angular-mocks/angular-mocks.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
@@ -141,6 +94,7 @@
 <script src="modules/common/home/directive/inLineEditDirective.js"></script>
 
 <script src="modules/noncommon/drnList/controllers/drnListController.js"></script>
+<script src="modules/noncommon/drnList/controllers/addDrnModalInstanceController.js"></script>
 <script src="modules/noncommon/drnDetail/controllers/drnDetailController.js"></script>
 <script src="modules/noncommon/drnDetail/services/payerDrnResource.js"></script>
 <script src="scripts/controllers/about.js"></script>

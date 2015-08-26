@@ -17,11 +17,12 @@
       'ngRoute',
       'ngSanitize',
       'ngTouch',
+      'ui.bootstrap',
       'ngMockE2E'
     ])
     .config(function ($routeProvider) {
       $routeProvider
-        .when('/payer/:id/drn', {
+        .when('/v1/payer/:id/drn', {
           templateUrl: 'modules/noncommon/drnList/partials/drnList.html',
           controller: 'drnListController'
         })
@@ -38,9 +39,5 @@
           redirectTo: '/'
         });
     });
-//    .run(function($httpBackend){
-//       //anything starting with modules allowed to pass through sine they are the view templates.
-//       $httpBackend.whenGET(/\modules/).passThrough();
-//    });
 }());
 
