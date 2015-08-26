@@ -1,0 +1,40 @@
+    <!-- Modal --> 
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+	    <form>
+		<div class="modal-header">
+		    <button type="submit" class="btn btn-cancel btn-sm" ng-click="modalDialog.cancel()">Cancel</button>
+		    <button type="submit" class="btn btn-primary btn-sm pull-right" ng-click="modalDialog.ok()">Add</button>
+		</div>
+		
+		<div class="modal-body">
+		    <h4 class="modal-title">Add DEFT number</h4>
+		    <div class="form-group">
+			<!--input type="text" class="form-control" placeholder="e.g. 4004 241 2344" ng-model="drn" typeahead="drn for drn in drns | limitTo:4" -->
+				<input type="text" ng-model="drn" placeholder="drn loaded via service" typeahead="drn for drn in getDrn($viewValue)" typeahead-loading="loadingDRNs" typeahead-no-results="noResults" class="form-control">
+
+				<a class="iconShortcut" ng-click="modalDialog.clear()" ng-hide="drn === ''"><span class="fa fa-times-circle"></span></a>
+
+				<p class="returnBiller" ng-hide="biller===''">HS BENTLEIGH - PM RENT Martin place A/C {{drn}}</p>
+		    </div>
+		    
+		    <div class="form-group">
+			<input type="email" class="form-control" placeholder="Alias  e.g. My Strata (optional)">
+			<span class="iconShortcut"><span class="fa fa-check-circle"></span></span>
+			<p class="descript">This is only to help you make your DRN make sense</p>
+
+		    </div>
+		    <div class="form-group">
+			<input type="email" class="form-control" placeholder="demonstration">
+			<span class="iconShortcut"><span class="fa fa-exclamation-circle"></span></span>
+		    </div>
+		    <div class="alert">
+			<strong>Error</strong> this DEFT number can�t be found etc
+		    </div>
+		</div>
+	   </form>
+   </div>
+</div>
+
+
+
